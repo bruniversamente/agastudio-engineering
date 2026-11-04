@@ -1,0 +1,13 @@
+test_allowance_applied_once (__main__.HeightPolicyTests.test_allowance_applied_once) ... ok
+test_calculation_preserves_more_than_display_precision (__main__.HeightPolicyTests.test_calculation_preserves_more_than_display_precision) ... ok
+test_display_preserves_negative_direction (__main__.HeightPolicyTests.test_display_preserves_negative_direction) ... ok
+test_display_truncates_without_rounding_up (__main__.HeightPolicyTests.test_display_truncates_without_rounding_up) ... ok
+test_infinite_limit_is_rejected (__main__.HeightPolicyTests.test_infinite_limit_is_rejected) ... ok
+test_missing_limit_remains_missing (__main__.HeightPolicyTests.test_missing_limit_remains_missing) ... ok
+test_nan_limit_is_rejected (__main__.HeightPolicyTests.test_nan_limit_is_rejected) ... ok
+test_unknown_display_is_not_zero (__main__.HeightPolicyTests.test_unknown_display_is_not_zero) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.000s
+
+OK

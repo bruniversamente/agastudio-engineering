@@ -1,0 +1,56 @@
+[
+  {
+    "reuse": "Approved native PNG captures and original vector from AGAStudio UX/UI case; original case and media unchanged.",
+    "media_ids": [
+      "modelo-3d",
+      "mapa",
+      "dados",
+      "resultado",
+      "pontos",
+      "consulta-3d",
+      "superficies",
+      "relatorio",
+      "perfil"
+    ]
+  },
+  {
+    "id": "start",
+    "source": "E:\\_CODEX PROJECTS\\Desemprego\\docs\\portfolio\\agastudio-software-2026-11-04\\captures\\start.png",
+    "sha256": "784a9657d02f9b7004f1f5e093d62dcc8d6e87e70e301451727e5050932f59f9",
+    "dimensions": [
+      1920,
+      1080
+    ],
+    "mode": "Real browser UI; 1920x1080 CSS viewport, normal UI scale. Synthetic product fixture. Lossless WebP."
+  },
+  {
+    "id": "heliport-study",
+    "source": "E:\\_CODEX PROJECTS\\Desemprego\\docs\\portfolio\\agastudio-software-2026-11-04\\captures\\heliport-study.png",
+    "sha256": "90a89ac3c0a6e1622cb3fdef27794dbe2af130d20dc970bfcde223e6f39945e4",
+    "dimensions": [
+      1920,
+      1080
+    ],
+    "mode": "Real browser UI; 1920x1080 CSS viewport, normal UI scale. Synthetic product fixture. Lossless WebP."
+  },
+  {
+    "id": "heliport-plan",
+    "source": "E:\\_CODEX PROJECTS\\Desemprego\\docs\\portfolio\\agastudio-software-2026-11-04\\captures\\heliport-plan.png",
+    "sha256": "659c0623a3598035cabe1fbdffc37190cf8070c35ab8d1dd9b464707bf40e0be",
+    "dimensions": [
+      1920,
+      1080
+    ],
+    "mode": "Real browser UI; 1920x1080 CSS viewport, normal UI scale. Synthetic product fixture. Lossless WebP."
+  },
+  {
+    "id": "process-files",
+    "source": "E:\\_CODEX PROJECTS\\Desemprego\\docs\\portfolio\\agastudio-software-2026-11-04\\captures\\process-files.png",
+    "sha256": "cefda974a511fe6917d2c32a4b58c99fc6897ccc021ec858d52b555f39df1a57",
+    "dimensions": [
+      1920,
+      1080
+    ],
+    "mode": "Real browser UI; 1920x1080 CSS viewport, normal UI scale. Synthetic product fixture. Lossless WebP."
+  }
+]

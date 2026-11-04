@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-04",
+  "node": "v24.14.0",
+  "python": "3.12.5",
+  "tests_passed": 30,
+  "tests_failed": 0,
+  "runs": [
+    {
+      "command": "node --test --test-reporter=tap tests/local-files.test.ts tests/project-package.test.ts",
+      "exit_code": 0,
+      "passed": 22,
+      "evidence": "node-tests.tap"
+    },
+    {
+      "command": "python -X utf8 tests/test_height_policy.py",
+      "exit_code": 0,
+      "passed": 8,
+      "evidence": "python-tests.txt"
+    },
+    {
+      "command": "node examples/project-package.ts",
+      "exit_code": 0,
+      "passed": null,
+      "evidence": "example.json"
+    }
+  ],
+  "scope": "Selected modules and fictional, temporary files. No complete engine run, backend, external AI service, real administrative process or release certification."
+}

@@ -1,0 +1,9 @@
+{
+  "bytes": 907,
+  "project": "Container demonstrativo",
+  "version": 4,
+  "restored": {
+    "note": "Container-only example; not a full AGA workspace",
+    "source": "synthetic"
+  }
+}

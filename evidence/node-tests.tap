@@ -1,0 +1,142 @@
+TAP version 13
+# Subtest: atomic saving preserves previous bytes in the backup
+ok 1 - atomic saving preserves previous bytes in the backup
+  ---
+  duration_ms: 12.7446
+  type: 'test'
+  ...
+# Subtest: backup rotation preserves the immediately preceding versions
+ok 2 - backup rotation preserves the immediately preceding versions
+  ---
+  duration_ms: 10.1609
+  type: 'test'
+  ...
+# Subtest: recovery restores bytes and metadata without replacing a saved project
+ok 3 - recovery restores bytes and metadata without replacing a saved project
+  ---
+  duration_ms: 5.6313
+  type: 'test'
+  ...
+# Subtest: missing recovery is reported as absent
+ok 4 - missing recovery is reported as absent
+  ---
+  duration_ms: 0.3944
+  type: 'test'
+  ...
+# Subtest: controlled file reader returns the selected project text
+ok 5 - controlled file reader returns the selected project text
+  ---
+  duration_ms: 3.7153
+  type: 'test'
+  ...
+# Subtest: relative parent traversal is refused
+ok 6 - relative parent traversal is refused
+  ---
+  duration_ms: 1.833
+  type: 'test'
+  ...
+# Subtest: secret file names are refused by the controlled reader
+ok 7 - secret file names are refused by the controlled reader
+  ---
+  duration_ms: 1.7384
+  type: 'test'
+  ...
+# Subtest: overwriting existing content requests confirmation and keeps the bytes
+ok 8 - overwriting existing content requests confirmation and keeps the bytes
+  ---
+  duration_ms: 2.9771
+  type: 'test'
+  ...
+# Subtest: an unrecognized operation is refused
+ok 9 - an unrecognized operation is refused
+  ---
+  duration_ms: 0.715
+  type: 'test'
+  ...
+# Subtest: destructive file policy requires a decision
+ok 10 - destructive file policy requires a decision
+  ---
+  duration_ms: 1.942
+  type: 'test'
+  ...
+# Subtest: round-trip preserves project data, attachment bytes and identity
+ok 11 - round-trip preserves project data, attachment bytes and identity
+  ---
+  duration_ms: 8.1844
+  type: 'test'
+  ...
+# Subtest: creation rejects duplicate attachment identities
+ok 12 - creation rejects duplicate attachment identities
+  ---
+  duration_ms: 0.357
+  type: 'test'
+  ...
+# Subtest: modified project payload is refused by checksum validation
+ok 13 - modified project payload is refused by checksum validation
+  ---
+  duration_ms: 2.412
+  type: 'test'
+  ...
+# Subtest: missing attachment is refused before restoring the project
+ok 14 - missing attachment is refused before restoring the project
+  ---
+  duration_ms: 1.6418
+  type: 'test'
+  ...
+# Subtest: unknown schema is refused even with valid hashes
+ok 15 - unknown schema is refused even with valid hashes
+  ---
+  duration_ms: 2.6495
+  type: 'test'
+  ...
+# Subtest: invalid attachment path is refused even with valid hashes
+ok 16 - invalid attachment path is refused even with valid hashes
+  ---
+  duration_ms: 1.5147
+  type: 'test'
+  ...
+# Subtest: empty package is refused
+ok 17 - empty package is refused
+  ---
+  duration_ms: 0.1254
+  type: 'test'
+  ...
+# Subtest: arbitrary bytes are refused as an invalid package
+ok 18 - arbitrary bytes are refused as an invalid package
+  ---
+  duration_ms: 2.1411
+  type: 'test'
+  ...
+# Subtest: content marker snapshot is independent of future edits
+ok 19 - content marker snapshot is independent of future edits
+  ---
+  duration_ms: 0.1159
+  type: 'test'
+  ...
+# Subtest: unchanged project content is recognized
+ok 20 - unchanged project content is recognized
+  ---
+  duration_ms: 0.0948
+  type: 'test'
+  ...
+# Subtest: a changed input fingerprint invalidates content equality
+ok 21 - a changed input fingerprint invalidates content equality
+  ---
+  duration_ms: 0.0513
+  type: 'test'
+  ...
+# Subtest: a changed heliport draft invalidates content equality
+ok 22 - a changed heliport draft invalidates content equality
+  ---
+  duration_ms: 0.0382
+  type: 'test'
+  ...
+1..22
+# tests 22
+# suites 0
+# pass 22
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 115.8637
