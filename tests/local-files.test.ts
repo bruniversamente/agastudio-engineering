@@ -1,0 +1,22 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {createRequire} from 'node:module';
+import {mkdtemp,mkdir,readFile,writeFile} from 'node:fs/promises';
+import {tmpdir} from 'node:os';
+import path from 'node:path';
+const require=createRequire(import.meta.url);
+const {writeProjectAtomically,saveProjectRecovery,loadProjectRecovery}=require('../src/project-storage.cjs');
+const {executeProjectFileOperation:operate}=require('../src/project-filesystem.cjs');
+const {resolveAgentFileDecision}=require('../src/agent-file-policy.cjs');
+const temporary=()=>mkdtemp(path.join(tmpdir(),'agastudio-engineering-'));
+// Each fixture owns its new temporary folder. It never opens a user project.
+test('atomic saving preserves previous bytes in the backup',async()=>{const root=await temporary();const target=path.join(root,'demo.aga');await writeProjectAtomically(target,Buffer.from('version-1'));await writeProjectAtomically(target,Buffer.from('version-2'));assert.equal(await readFile(target,'utf8'),'version-2');assert.equal(await readFile(target+'.bak.1','utf8'),'version-1');});
+test('backup rotation preserves the immediately preceding versions',async()=>{const root=await temporary();const target=path.join(root,'demo.aga');for(const version of ['a','b','c','d'])await writeProjectAtomically(target,Buffer.from(version));assert.equal(await readFile(target+'.bak.1','utf8'),'c');assert.equal(await readFile(target+'.bak.3','utf8'),'a');});
+test('recovery restores bytes and metadata without replacing a saved project',async()=>{const root=await temporary();const saved=path.join(root,'original.aga');await writeFile(saved,'saved');await saveProjectRecovery(root,{bytes:new Uint8Array([1,2,3]),displayName:'Demo.aga',projectId:'demo',capturedAt:'2026-11-04T12:00:00Z'});const recovery=await loadProjectRecovery(root);assert.deepEqual([...recovery.bytes],[1,2,3]);assert.equal(recovery.projectId,'demo');assert.equal(await readFile(saved,'utf8'),'saved');});
+test('missing recovery is reported as absent',async()=>{assert.equal(await loadProjectRecovery(await temporary()),null);});
+test('controlled file reader returns the selected project text',async()=>{const root=await temporary();await writeFile(path.join(root,'notes.txt'),'one\ntwo\nthree');const result=await operate({projectRoot:root,operation:{type:'read',path:'notes.txt',startLine:2,maxLines:1}});assert.equal(result.content,'two');});
+test('relative parent traversal is refused',async()=>{const root=await temporary();await assert.rejects(()=>operate({projectRoot:root,operation:{type:'read',path:'../outside.txt'}}),/relativo|permitido|inválido|autorizada/);});
+test('secret file names are refused by the controlled reader',async()=>{const root=await temporary();await writeFile(path.join(root,'.env'),'DEMO_ONLY=1');await assert.rejects(()=>operate({projectRoot:root,operation:{type:'read',path:'.env'}}),/protegido|permitido/);});
+test('overwriting existing content requests confirmation and keeps the bytes',async()=>{const root=await temporary();await writeFile(path.join(root,'notes.txt'),'original');const result=await operate({projectRoot:root,operation:{type:'write',path:'notes.txt',mode:'overwrite',content:'changed'}});assert.equal(result.confirmationRequired,true);assert.equal(await readFile(path.join(root,'notes.txt'),'utf8'),'original');});
+test('an unrecognized operation is refused',async()=>{const root=await temporary();await assert.rejects(()=>operate({projectRoot:root,operation:{type:'shell',path:'.'}}),/permitida|permitido/);});
+test('destructive file policy requires a decision',async()=>{const root=await temporary();assert.equal(resolveAgentFileDecision({operation:'delete',projectRoot:root,sourcePath:path.join(root,'notes.txt')}),'confirm');});
