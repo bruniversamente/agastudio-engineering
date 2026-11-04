@@ -1,0 +1,110 @@
+{
+  "captured_on": "2026-11-04",
+  "scope": "Selected modules and references; not the complete application.",
+  "files": [
+    {
+      "source": "app/lib/aga-project.ts",
+      "published": "src/aga-project.ts",
+      "original_sha256": "bcb90db95f16986017aebd1b81dc8e16a6231f2ad4ddd1418912a21b8bf3e13a",
+      "published_sha256": "498c7bd07438187ca99441de9b470bb39d087abd57774b93b1a1b27418fb97be",
+      "adaptation": "Import path for vendored fflate only; product logic unchanged.",
+      "role": "executable"
+    },
+    {
+      "source": "app/lib/aga-project-content-marker.ts",
+      "published": "src/project-content-marker.ts",
+      "original_sha256": "b8ab066d6df1c4b22204ca2e764559dedb78bf7a7a83d63c20ea653ebfae92a6",
+      "published_sha256": "b8ab066d6df1c4b22204ca2e764559dedb78bf7a7a83d63c20ea653ebfae92a6",
+      "adaptation": "Unmodified copy.",
+      "role": "executable"
+    },
+    {
+      "source": "desktop/agent-file-policy.cjs",
+      "published": "src/agent-file-policy.cjs",
+      "original_sha256": "f3bb1ec5596c3bef33f852ebeb013a0206ba3909852111e1c72344f60dbdde9b",
+      "published_sha256": "f3bb1ec5596c3bef33f852ebeb013a0206ba3909852111e1c72344f60dbdde9b",
+      "adaptation": "Unmodified copy.",
+      "role": "executable"
+    },
+    {
+      "source": "desktop/project-storage.cjs",
+      "published": "src/project-storage.cjs",
+      "original_sha256": "bece46ff59d2b42eaf7d424a248dde55bf4cd915ea0896add07df6f9b9c4ec92",
+      "published_sha256": "bece46ff59d2b42eaf7d424a248dde55bf4cd915ea0896add07df6f9b9c4ec92",
+      "adaptation": "Unmodified copy.",
+      "role": "executable"
+    },
+    {
+      "source": "desktop/project-filesystem.cjs",
+      "published": "src/project-filesystem.cjs",
+      "original_sha256": "7caa0f2fdb2f64526a54fbc51da9e1ec26f00b73abc7b3190458c2f44f9e0df8",
+      "published_sha256": "7caa0f2fdb2f64526a54fbc51da9e1ec26f00b73abc7b3190458c2f44f9e0df8",
+      "adaptation": "Unmodified copy.",
+      "role": "executable"
+    },
+    {
+      "source": "engine-api/src/easyaga_engine/height_safety.py",
+      "published": "python/height_safety.py",
+      "original_sha256": "7a628d22868eb84489f2720416ac29238b28bb4d261c17d7d988f5d393aef656",
+      "published_sha256": "7a628d22868eb84489f2720416ac29238b28bb4d261c17d7d988f5d393aef656",
+      "adaptation": "Unmodified copy.",
+      "role": "executable"
+    },
+    {
+      "source": "app/lib/aga-project-model.ts",
+      "published": "reference/aga-project-model.ts",
+      "original_sha256": "e6cdbca3976d1887f9d267f2a8406ab6fb39fcfb5379d32e06a582281fe1c5cf",
+      "published_sha256": "e6cdbca3976d1887f9d267f2a8406ab6fb39fcfb5379d32e06a582281fe1c5cf",
+      "adaptation": "Unmodified copy.",
+      "role": "reference_only"
+    },
+    {
+      "source": "app/lib/aga-report-contract.ts",
+      "published": "reference/aga-report-contract.ts",
+      "original_sha256": "e413ef2b6df107256f381e4073d586af239dbc22129e45392a7b9e8b8a5e613b",
+      "published_sha256": "e413ef2b6df107256f381e4073d586af239dbc22129e45392a7b9e8b8a5e613b",
+      "adaptation": "Unmodified copy.",
+      "role": "reference_only"
+    },
+    {
+      "source": "app/lib/technical-model-3d.ts",
+      "published": "reference/technical-model-3d.ts",
+      "original_sha256": "9ccc1f402a641ba1fb97b2db6de8d97bfc82ba79e48041a09ac089f374b75ffd",
+      "published_sha256": "9ccc1f402a641ba1fb97b2db6de8d97bfc82ba79e48041a09ac089f374b75ffd",
+      "adaptation": "Unmodified copy.",
+      "role": "reference_only"
+    },
+    {
+      "source": "engine-api/src/easyaga_engine/surface_model.py",
+      "published": "reference/surface_model.py",
+      "original_sha256": "2acbfacbf68be4c62b85edb363057f13fce64c8f75b5b54b73b879d7443eb23e",
+      "published_sha256": "2acbfacbf68be4c62b85edb363057f13fce64c8f75b5b54b73b879d7443eb23e",
+      "adaptation": "Unmodified copy.",
+      "role": "reference_only"
+    },
+    {
+      "source": "engine-api/src/easyaga_engine/heliport.py",
+      "published": "reference/heliport.py",
+      "original_sha256": "f3ba3150e64afa25d11635558915a9342207024dd7057618080b8dd579367ed9",
+      "published_sha256": "f3ba3150e64afa25d11635558915a9342207024dd7057618080b8dd579367ed9",
+      "adaptation": "Unmodified copy.",
+      "role": "reference_only"
+    },
+    {
+      "source": "node_modules/fflate/esm/browser.js",
+      "published": "vendor/fflate.js",
+      "original_sha256": "8cc1f687e0159e977addb6b85e274dbd11e622cf151f4fcb7b85d49622ea43e7",
+      "published_sha256": "8cc1f687e0159e977addb6b85e274dbd11e622cf151f4fcb7b85d49622ea43e7",
+      "adaptation": "Unmodified copy.",
+      "role": "dependency"
+    },
+    {
+      "source": "node_modules/fflate/LICENSE",
+      "published": "vendor/FFLATE-LICENSE",
+      "original_sha256": "805f6cb28bb8b6d3a0badd83c93bccd9671fa01a3b4b92b7042b0743325ac243",
+      "published_sha256": "805f6cb28bb8b6d3a0badd83c93bccd9671fa01a3b4b92b7042b0743325ac243",
+      "adaptation": "Unmodified copy.",
+      "role": "dependency"
+    }
+  ]
+}
