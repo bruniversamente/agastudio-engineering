@@ -26,14 +26,16 @@
   },
   {
     "id": "heliport-study",
-    "source": "portfolio-workspace/docs/portfolio/agastudio-software-2026-11-04/captures/heliport-study.png",
-    "sha256": "90a89ac3c0a6e1622cb3fdef27794dbe2af130d20dc970bfcde223e6f39945e4",
+    "source": "portfolio-workspace/docs/portfolio/agastudio-software-2026-11-04/captures/heliport-study-esri.jpg",
+    "sha256": "0b00404addac0ad781d6b459389824ac71fa51fc5403ad932472d9b18442d514",
     "dimensions": [
       1920,
       1080
     ],
     "mode": "Real browser UI; 1920x1080 CSS viewport, normal UI scale. Synthetic product fixture. Lossless WebP.",
-    "source_format": "JPEG"
+    "source_format": "JPEG",
+    "map_base": "Satellite / Esri; attribution preserved in actual UI capture",
+    "correction": "Recaptured through the program UI; no retouching or masking. API KEY REQUIRED image replaced."
   },
   {
     "id": "heliport-plan",
